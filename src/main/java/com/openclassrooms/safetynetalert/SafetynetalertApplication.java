@@ -17,7 +17,7 @@ public class SafetynetalertApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String ...args) throws Exception{
-	    System.out.println("Load DataJson ...");
+	    System.out.println("Loading DataJson ...");
 	    System.out.println("-----------------");
 	    System.out.println("Load Persons");
 		loadDataJSON.loadPersons();
