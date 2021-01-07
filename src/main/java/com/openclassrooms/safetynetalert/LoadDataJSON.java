@@ -93,19 +93,29 @@ public class LoadDataJSON {
         Object obj = loadJsonFile();
         JSONObject jsonObject = (JSONObject) obj ;
         JSONArray medicalRecords = (JSONArray) jsonObject.get("medicalrecords");
+        JSONArray medicationsKey = new JSONArray();
+        JSONArray allergiesKey = new JSONArray() ;
 
         for(int i = 0 ; i < medicalRecords.size() ; i++){
             JSONObject medicalRecord0 = (JSONObject) medicalRecords.get(i);
             String firstNameKey = (String) medicalRecord0.get("firstName");
             String lastNameKey = (String) medicalRecord0.get("lastName");
             String birthdateKey = (String) medicalRecord0.get("birthdate");
-            //String medicationsKey = (String) medicalRecord0.get("medications");
-            //String allergiesKey = (String) medicalRecord0.get("allergies");
+            if(medicalRecord0.get("medications").toString().equals("[]") || medicalRecord0.get("allergies").toString().equals("[]")){
+                medicationsKey = (JSONArray) medicalRecord0.get("medications");
+                allergiesKey = (JSONArray) medicalRecord0.get("allergies");
+            }
+            else {
+                medicationsKey = (JSONArray) medicalRecord0.get("medications");
+                allergiesKey = (JSONArray) medicalRecord0.get("allergies");
+            }
+            mMedicalRecords.getMedications().add(medicationsKey);
+            mMedicalRecords.getAllergies().add(allergiesKey);
             mMedicalRecords.getFirstName().add(firstNameKey);
             mMedicalRecords.getLastName().add(lastNameKey);
             mMedicalRecords.getBirthdate().add(birthdateKey);
-            //mMedicalRecords.getMedications().add(medicationsKey);
-            //mMedicalRecords.getAllergies().add(allergiesKey);
+
+
         }
     }
 

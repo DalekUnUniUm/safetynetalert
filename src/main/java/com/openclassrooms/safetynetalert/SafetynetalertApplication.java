@@ -17,6 +17,9 @@ public class SafetynetalertApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String ...args) throws Exception{
+		System.out.println("-------------------------------------------");
+		System.out.println("WELCOME TO SAFETY NET ALERT API VERSION 0.3");
+		System.out.println("-------------------------------------------");
 	    System.out.println("Loading DataJson ...");
 	    System.out.println("-----------------");
 	    System.out.println("Load Persons");
