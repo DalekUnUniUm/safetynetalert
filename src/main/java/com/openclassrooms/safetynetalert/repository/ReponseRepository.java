@@ -38,34 +38,25 @@ public class ReponseRepository {
 
         address = addressFromNumberStation(station_number);
 
-        /**Si la station existe elle retourne une adresse donc rempli le tableau, sinon il est vide et on renvoie un
-         * message d'erreur
-         */
-        if(address.size() == 0){
-            personsByStation.add("Cette station n'est pas dans notre base de données") ;
-        }
-        else{
-            for(int i = 0 ; i < mPersons.getFirstName().size() ; i++){
-                for(int j = 0 ; j < address.size() ; j++){
-                    if(mPersons.getAddress().get(i).equals(address.get(j))){
-                        obj = new JSONObject();
-                        obj.put("firstName", mPersons.getFirstName().get(i));
-                        obj.put("lastName", mPersons.getLastName().get(i));
-                        obj.put("address",mPersons.getAddress().get(i));
-                        obj.put("phone",mPersons.getPhone().get(i));
-                        if(agePersons(""+mMedicalRecords.getBirthdate().get(i)) <= 18)
-                            nbrEnfant++ ;
-                        else if(agePersons(""+mMedicalRecords.getBirthdate().get(i)) > 18)
-                            nbrAdulte++ ;
+        for(int i = 0 ; i < mPersons.getFirstName().size() ; i++){
+            for(int j = 0 ; j < address.size() ; j++){
+                if(mPersons.getAddress().get(i).equals(address.get(j))){
+                    obj = new JSONObject();
+                    obj.put("firstName", mPersons.getFirstName().get(i));
+                    obj.put("lastName", mPersons.getLastName().get(i));
+                    obj.put("address",mPersons.getAddress().get(i));
+                    obj.put("phone",mPersons.getPhone().get(i));
+                    if(agePersons(""+mMedicalRecords.getBirthdate().get(i)) <= 18)
+                        nbrEnfant++ ;
+                    else if(agePersons(""+mMedicalRecords.getBirthdate().get(i)) > 18)
+                        nbrAdulte++ ;
 
-                        personsByStation.add(obj);
-                    }
+                    personsByStation.add(obj);
                 }
-
             }
-            personsByStation.add("Nombre(s) mineur(s) = " + nbrEnfant);
-            personsByStation.add("Nombre(s) adulte(s) = " + nbrAdulte);
         }
+        personsByStation.add("Nombre(s) mineur(s) = " + nbrEnfant);
+        personsByStation.add("Nombre(s) adulte(s) = " + nbrAdulte);
 
 
         return personsByStation ;
@@ -110,26 +101,18 @@ public class ReponseRepository {
         address = new JSONArray();
 
         address = addressFromNumberStation(firestation_number);
-        /**Si la station existe elle retourne une adresse donc rempli le tableau, sinon il est vide et on renvoie un
-         * message d'erreur
-         */
-        if(address.size() == 0){
-            phoneByStation.add("Cette station n'est pas dans notre base de données") ;
-        }
-        else{
-            for(int i = 0 ; i < mPersons.getAddress().size();i++){
-                for(int j = 0 ; j < address.size(); j++){
-                    if(mPersons.getAddress().get(i).equals(address.get(j))){
-                        obj = new JSONObject();
-                        obj.put("phone",mPersons.getPhone().get(i));
-                        phoneByStation.add(obj);
 
-                    }
+        for(int i = 0 ; i < mPersons.getAddress().size();i++){
+            for(int j = 0 ; j < address.size(); j++){
+                if(mPersons.getAddress().get(i).equals(address.get(j))){
+                    obj = new JSONObject();
+                    obj.put("phone",mPersons.getPhone().get(i));
+                    phoneByStation.add(obj);
+
                 }
-
             }
-        }
 
+        }
         return phoneByStation ;
     }
     /**Endpoint de fire?address=<address>**/
