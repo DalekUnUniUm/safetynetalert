@@ -9,8 +9,6 @@
 
 package com.openclassrooms.safetynetalert;
 
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openclassrooms.safetynetalert.model.FireStations;
 import com.openclassrooms.safetynetalert.model.MedicalRecords;
@@ -21,10 +19,7 @@ import org.json.simple.parser.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.awt.desktop.SystemSleepEvent;
 import java.io.FileReader;
-import java.nio.file.Paths;
-import java.util.Map;
 
 @Component
 public class LoadDataJSON {
@@ -118,5 +113,4 @@ public class LoadDataJSON {
 
         }
     }
-
 }
