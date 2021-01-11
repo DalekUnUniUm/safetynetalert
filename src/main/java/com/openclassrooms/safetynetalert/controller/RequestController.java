@@ -64,10 +64,13 @@ public class RequestController {
     public String createMedicalRecord(@RequestBody String medicalRecord){
         return requestService.cretaMedicalRecords(medicalRecord);
     }
-    /**Endpoint de PUT /medicalRecord**/
     @PutMapping("/medicalRecord")
     public String updateMedicalRecords(@RequestBody String medicalRecord){
         return requestService.updateMedicalRecords(medicalRecord);
+    }
+    @DeleteMapping("/medicalRecord")
+    public String deleteMedicalRecords(@RequestBody String medicalRecord){
+        return requestService.deleteMedicalRecords(medicalRecord);
     }
 
 }

@@ -73,9 +73,9 @@ public class ReponseRepository {
                 if(agePersons(""+mMedicalRecords.getBirthdate().get(i)) <= 18){
                     checkChild = 1 ;
                     obj = new JSONObject();
-                    obj.put("age:", agePersons(""+ mMedicalRecords.getBirthdate().get(i)));
-                    obj.put("firstName:", mPersons.getFirstName().get(i));
-                    obj.put("lastName:", mPersons.getLastName().get(i));
+                    obj.put("lastName", mPersons.getLastName().get(i));
+                    obj.put("firstName", mPersons.getFirstName().get(i));
+                    obj.put("age", agePersons(""+ mMedicalRecords.getBirthdate().get(i)));
                     childByAddress.add(obj);
                 }
 
@@ -84,8 +84,8 @@ public class ReponseRepository {
         if(checkChild == 1){
             for(int i = 0 ; i < mPersons.getAddress().size() ; i++){
                 if(mPersons.getAddress().get(i).equals(address)){
-                    listFamilly.add("firstName:" + mPersons.getFirstName().get(i));
-                    listFamilly.add("lastName:"+mPersons.getLastName().get(i));
+                    listFamilly.add("firstName: " + mPersons.getFirstName().get(i));
+                    listFamilly.add("lastName: "+mPersons.getLastName().get(i));
                 }
 
             }
@@ -151,7 +151,7 @@ public class ReponseRepository {
                     obj = new JSONObject();
                     obj.put("lastName", mPersons.getLastName().get(j));
                     obj.put("phone", mPersons.getPhone().get(j));
-                    obj.put("age ", agePersons(""+mMedicalRecords.getBirthdate().get(j)));
+                    obj.put("age", agePersons(""+mMedicalRecords.getBirthdate().get(j)));
                     obj.put("medicament", mMedicalRecords.getMedications().get(j));
                     obj.put("allergies", mMedicalRecords.getAllergies().get(j));
                     famillyByAddress.add(obj);

@@ -3,6 +3,7 @@ package com.openclassrooms.safetynetalert;
 import com.openclassrooms.safetynetalert.model.FireStations;
 import com.openclassrooms.safetynetalert.model.MedicalRecords;
 import com.openclassrooms.safetynetalert.model.Persons;
+import com.openclassrooms.safetynetalert.service.CheckerService;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class SaveDataJSON {
     @Autowired
     private MedicalRecords mMedicalRecords ; /** Le m indique qu'on cherche la classe MedicalRecords dans le modele**/
     @Autowired
-    private LoadDataJSON loadDataJSON ;
+    private CheckerService checkerService ;
 
     public void saveDataJson(){
         JSONObject obj = new JSONObject();
@@ -67,9 +68,7 @@ public class SaveDataJSON {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        loadDataJSON.loadPersons();
-        loadDataJSON.loadFireStations();
-        loadDataJSON.loadMedicalRecords();
 
+        checkerService.checkingLoadDataJSon();
     }
 }

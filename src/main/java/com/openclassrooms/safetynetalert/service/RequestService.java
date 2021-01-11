@@ -44,5 +44,8 @@ public class RequestService {
     public String updateMedicalRecords(String medicalRecord){
         return requestRepository.updateMedicalRecords(medicalRecord);
     }
-
+    /**Endpoint de DELETE /medicalRecord**/
+    public String deleteMedicalRecords(String medicalRecord){
+        return requestRepository.deleteMedicalRecords(medicalRecord);
+    }
 }

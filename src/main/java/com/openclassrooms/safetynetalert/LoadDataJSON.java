@@ -31,12 +31,12 @@ public class LoadDataJSON {
     @Autowired
     private MedicalRecords mMedicalRecords ; /** Le m indique qu'on cherche la classe MedicalRecords dans le modele**/
 
-    public Object loadJsonFile(){
+    public Object loadJsonFile(String url){
         try{
             JSONParser jsonParser = new JSONParser();
             ObjectMapper objectMapper = new ObjectMapper() ;
 
-            Object obj = jsonParser.parse(new FileReader("C:/Users/Romuald/Desktop/Exercice OCR/Developpement d'application java/Projet 5/safetynetalert/src/main/resources/data.json"));
+            Object obj = jsonParser.parse(new FileReader(url));
 
             return obj ;
 
@@ -47,8 +47,11 @@ public class LoadDataJSON {
         return null ;
     }
     /**Charge les données de l'Array Persons dans une classe Persons**/
-    public void loadPersons(){
-        Object obj = loadJsonFile();
+    public boolean loadPersons(String url){
+
+        resetArrayPersons();
+
+        Object obj = loadJsonFile(url);
         JSONObject jsonObject = (JSONObject) obj ;
         JSONArray persons = (JSONArray) jsonObject.get("persons");
 
@@ -69,10 +72,15 @@ public class LoadDataJSON {
             mPersons.getPhone().add(phoneKey);
             mPersons.getEmail().add(emailKey);
         }
+
+        return true ;
     }
     /**Charge les données de l'Array firestations dans une classe firestations**/
-    public void loadFireStations(){
-        Object obj = loadJsonFile();
+    public boolean loadFireStations(String url){
+
+        resetArrayFireStation();
+
+        Object obj = loadJsonFile(url);
         JSONObject jsonObject = (JSONObject) obj ;
         JSONArray fireStations = (JSONArray) jsonObject.get("firestations");
 
@@ -83,9 +91,15 @@ public class LoadDataJSON {
             mFireStations.getAddress().add(addressKey);
             mFireStations.getStation().add(stationKey);
         }
+
+        return true ;
     }
-    public void loadMedicalRecords(){
-        Object obj = loadJsonFile();
+    /**Charge les données de l'Array medicalrecord dans une classe firestations**/
+    public boolean loadMedicalRecords(String url){
+
+        resetArrayMedicalRecord();
+
+        Object obj = loadJsonFile(url);
         JSONObject jsonObject = (JSONObject) obj ;
         JSONArray medicalRecords = (JSONArray) jsonObject.get("medicalrecords");
         JSONArray medicationsKey = new JSONArray();
@@ -112,5 +126,32 @@ public class LoadDataJSON {
 
 
         }
+
+        return true ;
     }
+
+    /**Remise à zéro des Arrays dans les classe Persons / FireStations / MedicalRecord**/
+    public void resetArrayPersons(){
+        mPersons.setFirstName(new JSONArray());
+        mPersons.setLastName(new JSONArray());
+        mPersons.setAddress(new JSONArray());
+        mPersons.setCity(new JSONArray());
+        mPersons.setZip(new JSONArray());
+        mPersons.setPhone(new JSONArray());
+        mPersons.setEmail(new JSONArray());
+    }
+
+    public void resetArrayFireStation(){
+        mFireStations.setAddress(new JSONArray());
+        mFireStations.setStation(new JSONArray());
+    }
+
+    public void resetArrayMedicalRecord(){
+        mMedicalRecords.setFirstName(new JSONArray());
+        mMedicalRecords.setLastName(new JSONArray());
+        mMedicalRecords.setBirthdate(new JSONArray());
+        mMedicalRecords.setMedications(new JSONArray());
+        mMedicalRecords.setAllergies(new JSONArray());
+    }
+
 }
