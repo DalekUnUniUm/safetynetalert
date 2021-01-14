@@ -1,0 +1,492 @@
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading DataJson ...
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Persons
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayPersons()
+DEBUG: resetArrayPerson
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load FireStations
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayFireStation()
+DEBUG: resetArrayFireStation
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Medical Records
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayMedicalRecord()
+DEBUG: resetArrayMedicalRecord
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:37 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading over
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.ReponseController.childrenByAddress()
+INFO: address: 489 Manchester St
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: agePersons: 10/02/2010
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: age: 10
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: agePersons: 10/02/2010
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: age: 10
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.childrenByAddress()
+INFO: childByAddress: [{"lastName":"Cooper","firstName":"Zach","age":10},["firstName: Zach","lastName: Cooper"]]
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.ReponseController.emailByCity()
+INFO: City: Culver
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.emailByCity()
+INFO: emailByCity: Culver
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.ReponseController.personsByStation()
+INFO: stationnumber: 3
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.addressFromNumberStation()
+DEBUG: addressFromNumberStation: 3
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.addressFromNumberStation()
+DEBUG: addressFromNumberSt: ["1509 Culver St"]
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: agePersons: 03/06/1984
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: age: 36
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: agePersons: 03/06/1984
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: age: 36
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.personByStation()
+INFO: personsByStation: [{"firstName":"John","lastName":"Boyd","address":"1509 Culver St","phone":"841-874-6512"},"Nombre(s) mineur(s) = 0","Nombre(s) adulte(s) = 1"]
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.ReponseController.personsInfoByName()
+INFO: firstName: John lastName: Boyd
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: agePersons: 03/06/1984
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: age: 36
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.personsInfoByName()
+INFO: personsInfoByName: [{"allergies":["nillacilan"],"lastName":"Boyd","address":"1509 Culver St","medicament":["aznol:350mg","hydrapermazol:100mg"],"age":36}]
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.ReponseController.phoneByStation()
+INFO: firestation: 3
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.addressFromNumberStation()
+DEBUG: addressFromNumberStation: 3
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.addressFromNumberStation()
+DEBUG: addressFromNumberSt: ["1509 Culver St"]
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.phoneByStation()
+INFO: phoneByStation: [{"phone":"841-874-6512"}]
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.ReponseController.famillyByAddress()
+INFO: stations: 3
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.addressFromNumberStation()
+DEBUG: addressFromNumberStation: 3
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.addressFromNumberStation()
+DEBUG: addressFromNumberSt: ["1509 Culver St"]
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: agePersons: 03/06/1984
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: age: 36
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.famillyByAddress()
+INFO: famillyByAddress: [{"address":"1509 Culver St"},{"allergies":["nillacilan"],"lastName":"Boyd","phone":"841-874-6512","medicament":["aznol:350mg","hydrapermazol:100mg"],"age":36}]
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.ReponseController.childrenByAddress()
+INFO: address: 1509 Culver St
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: agePersons: 03/06/1984
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: age: 36
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.childrenByAddress()
+INFO: childByAddress: []
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.ReponseController.personsByAddress()
+INFO: address: 1509 Culver St
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.numberStationFromAddress()
+DEBUG: numberStationFromAddress: 1509 Culver St
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.numberStationFromAddress()
+DEBUG: numberStationFrAd: 3
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: agePersons: 03/06/1984
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.agePersons()
+DEBUG: age: 36
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.ReponseRepository.personsByAddress()
+INFO: personByAddress: [{"Station":"3"},{"allergies":["nillacilan"],"lastName":"Boyd","phone":"841-874-6512","medicament":["aznol:350mg","hydrapermazol:100mg"],"age ":36}]
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.RequestController.createPerson()
+INFO: createPerson: {"zip":"97451","firstName":"Jacques","lastName":"Flamme","address":"112 Steppes Pl","city":"Culver","phone":"841-874-65220","email":"tenz@email.com"}
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading DataJson ...
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Persons
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayPersons()
+DEBUG: resetArrayPerson
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load FireStations
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayFireStation()
+DEBUG: resetArrayFireStation
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Medical Records
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayMedicalRecord()
+DEBUG: resetArrayMedicalRecord
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading over
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.RequestRepository.createPerson()
+INFO: statusCode: 700
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.RequestController.updatePerson()
+INFO: updatePerson: {"zip":"97451","firstName":"Jacques","lastName":"Flamme","address":"112 Steppes Pl","city":"Culver","phone":"841-874-65122","email":"jacFl@email.com"}
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading DataJson ...
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Persons
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayPersons()
+DEBUG: resetArrayPerson
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load FireStations
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayFireStation()
+DEBUG: resetArrayFireStation
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Medical Records
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayMedicalRecord()
+DEBUG: resetArrayMedicalRecord
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading over
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.RequestRepository.updatePerson()
+INFO: statusCode700
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.RequestController.deletePerson()
+INFO: deletePerson: {"firstName":"Jacques","lastName":"Flamme"}
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading DataJson ...
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Persons
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayPersons()
+DEBUG: resetArrayPerson
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load FireStations
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayFireStation()
+DEBUG: resetArrayFireStation
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Medical Records
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayMedicalRecord()
+DEBUG: resetArrayMedicalRecord
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading over
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.RequestRepository.deletePerson()
+INFO: statusCode: 700
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.RequestController.createFireStation()
+INFO: createFireStation: {"address":"29 15th St","station":"2"}
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading DataJson ...
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Persons
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayPersons()
+DEBUG: resetArrayPerson
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load FireStations
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayFireStation()
+DEBUG: resetArrayFireStation
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Medical Records
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayMedicalRecord()
+DEBUG: resetArrayMedicalRecord
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading over
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.RequestRepository.createFireStation()
+INFO: statusCode: 700
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.RequestController.updateFireStation()
+INFO: updateFireStation: {"address":"29 15th St","station":"4"}
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading DataJson ...
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Persons
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayPersons()
+DEBUG: resetArrayPerson
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load FireStations
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayFireStation()
+DEBUG: resetArrayFireStation
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Medical Records
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayMedicalRecord()
+DEBUG: resetArrayMedicalRecord
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading over
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.RequestRepository.updateFireStation()
+INFO: statusCode: 700
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.RequestController.deleteFireStation()
+INFO: deleteFireStation: {"address":"29 15th St","station":"4"}
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading DataJson ...
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Persons
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayPersons()
+DEBUG: resetArrayPerson
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load FireStations
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayFireStation()
+DEBUG: resetArrayFireStation
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Medical Records
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayMedicalRecord()
+DEBUG: resetArrayMedicalRecord
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading over
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.RequestRepository.deleteFireStation()
+INFO: statusCode: 700
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.RequestController.createMedicalRecord()
+INFO: createMedicalRecord: {"allergies":[],"firstName":"Jacques","lastName":"Flamme","birthdate":"07\/26\/1989","medications":[]}
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading DataJson ...
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Persons
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayPersons()
+DEBUG: resetArrayPerson
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load FireStations
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayFireStation()
+DEBUG: resetArrayFireStation
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Medical Records
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayMedicalRecord()
+DEBUG: resetArrayMedicalRecord
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading over
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.RequestRepository.createMedicalRecords()
+INFO: statusCode: 700
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.RequestController.updateMedicalRecords()
+INFO: updateMedicalRecords: {"allergies":["saumon"],"firstName":"Jacques","lastName":"Flamme","birthdate":"07\/26\/1989","medications":[]}
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading DataJson ...
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Persons
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayPersons()
+DEBUG: resetArrayPerson
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load FireStations
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayFireStation()
+DEBUG: resetArrayFireStation
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Medical Records
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayMedicalRecord()
+DEBUG: resetArrayMedicalRecord
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading over
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.RequestRepository.updateMedicalRecords()
+INFO: statusCode: 700
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.controller.RequestController.deleteMedicalRecords()
+INFO: deleteMedicalRecords: {"firstName":"Jacques","lastName":"Flamme"}
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading DataJson ...
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Persons
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayPersons()
+DEBUG: resetArrayPerson
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load FireStations
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayFireStation()
+DEBUG: resetArrayFireStation
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Load Medical Records
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayMedicalRecord()
+DEBUG: resetArrayMedicalRecord
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: SUCCESS
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+DEBUG: Loading over
+2021-01-14 10:41:38 [main] com.openclassrooms.safetynetalert.repository.RequestRepository.deleteMedicalRecords()
+INFO: statusCode: 700
+2021-01-14 10:41:39 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:39 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayPersons()
+DEBUG: resetArrayPerson
+2021-01-14 10:41:39 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:39 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:39 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayFireStation()
+DEBUG: resetArrayFireStation
+2021-01-14 10:41:39 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success
+2021-01-14 10:41:39 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSONTest()
+DEBUG: getUrlDataJSONTest
+2021-01-14 10:41:39 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayMedicalRecord()
+DEBUG: resetArrayMedicalRecord
+2021-01-14 10:41:39 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+DEBUG: loadJsonFile success

@@ -8,10 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SafetynetalertApplication implements CommandLineRunner {
-
 	@Autowired
 	private CheckerService checkerService;
-
 	public static void main(String[] args) {
 		SpringApplication.run(SafetynetalertApplication.class, args);
 	}
@@ -19,11 +17,9 @@ public class SafetynetalertApplication implements CommandLineRunner {
 	@Override
 	public void run(String ...args) throws Exception{
 		System.out.println("-------------------------------------------");
-		System.out.println("WELCOME TO SAFETY NET ALERT API VERSION 0.5");
+		System.out.println("WELCOME TO SAFETY NET ALERT API VERSION 0.6");
 		System.out.println("-------------------------------------------");
-
 		checkerService.checkingLoadDataJSon();
-
 	}
 
 }

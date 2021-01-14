@@ -2,6 +2,7 @@ package com.openclassrooms.safetynetalert.repository;
 
 import com.openclassrooms.safetynetalert.LoadDataJSON;
 import com.openclassrooms.safetynetalert.SaveDataJSON;
+import com.openclassrooms.safetynetalert.config.UrlFileReader;
 import com.openclassrooms.safetynetalert.model.FireStations;
 import com.openclassrooms.safetynetalert.model.MedicalRecords;
 import com.openclassrooms.safetynetalert.model.Persons;
@@ -9,6 +10,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.pmw.tinylog.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -23,15 +25,17 @@ public class RequestRepository {
     private FireStations mFireStations ;
     @Autowired
     private MedicalRecords mMedicalRecords ;
+    @Autowired
+    private UrlFileReader urlFileReader ;
 
     private JSONObject jsonObject ;
     private int index ;
-    private String msg ;
+    private String statusCode ;
 
     /**Endpoint de POST /person**/
     public String createPerson(String person){
 
-        msg = "Personne enregistré avec succés" ;
+        statusCode = "700" ;
         jsonObject= new JSONObject();
         jsonObject = converteStrJSon(person);
 
@@ -43,20 +47,20 @@ public class RequestRepository {
         mPersons.getPhone().add(jsonObject.get("phone"));
         mPersons.getEmail().add(jsonObject.get("email"));
 
-        saveDataJSON.saveDataJson();
-
-        return msg ;
+        saveDataJSON.saveDataJson(urlFileReader.urlDataJSON());
+        Logger.info("statusCode: " + statusCode);
+        return statusCode ;
     }
     /**Endpoint de PUT /person**/
     public String updatePerson(String person){
-        msg = "La personne n'existe pas" ;
+        statusCode = "704" ;
         jsonObject = converteStrJSon(person);
 
         index = -1 ;
 
         for(int i = 0 ; i < mPersons.getAddress().size() ; i++){
             if(mPersons.getFirstName().get(i).equals(jsonObject.get("firstName")) && mPersons.getLastName().get(i).equals(jsonObject.get("lastName"))){
-                msg = "Modification effectué" ;
+                statusCode = "700" ;
                 index = i ;
 
             }
@@ -83,20 +87,20 @@ public class RequestRepository {
             mPersons.getEmail().remove(index);
             mPersons.getEmail().add(jsonObject.get("email"));
 
-            saveDataJSON.saveDataJson();
+            saveDataJSON.saveDataJson(urlFileReader.urlDataJSON());
         }
-
-        return msg ;
+        Logger.info("statusCode" + statusCode);
+        return statusCode ;
     }
     /**Endpoint de DELETE /person**/
     public String deletePerson(String person){
-        msg = "Cette personne n'existe pas" ;
+        statusCode = "704" ;
         jsonObject = converteStrJSon(person);
         index = -1 ;
 
         for(int i = 0 ; i < mPersons.getFirstName().size() ; i++){
             if(mPersons.getFirstName().get(i).equals(jsonObject.get("firstName")) && mPersons.getLastName().get(i).equals(jsonObject.get("lastName"))){
-                msg = "Suppresion effectué" ;
+                statusCode = "700" ;
                 index = i ;
             }
         }
@@ -109,15 +113,15 @@ public class RequestRepository {
             mPersons.getCity().remove(index);
             mPersons.getPhone().remove(index);
             mPersons.getEmail().remove(index);
-            saveDataJSON.saveDataJson();
+            saveDataJSON.saveDataJson(urlFileReader.urlDataJSON());
         }
-
-        return msg ;
+        Logger.info("statusCode: " + statusCode);
+        return statusCode ;
     }
 
     /**Endpoint de POST /firestation**/
     public String createFireStation(String fireStation){
-        msg = "Caserne ajoutée avec succés" ;
+        statusCode = "700" ;
 
         jsonObject = new JSONObject();
         jsonObject = converteStrJSon(fireStation);
@@ -125,20 +129,20 @@ public class RequestRepository {
         mFireStations.getAddress().add(jsonObject.get("address"));
         mFireStations.getStation().add(jsonObject.get("station"));
 
-        saveDataJSON.saveDataJson();
-
-        return msg ;
+        saveDataJSON.saveDataJson(urlFileReader.urlDataJSON());
+        Logger.info("statusCode: " + statusCode);
+        return statusCode ;
     }
     /**Endpoint de PUT /firestation**/
     public String updateFireStation(String fireStation){
-        msg = "Cette station n'existe pas" ;
+        statusCode = "704" ;
         jsonObject = converteStrJSon(fireStation) ;
 
         index = -1 ;
 
         for(int i = 0 ; i < mFireStations.getAddress().size() ; i++){
             if(mFireStations.getAddress().get(i).equals(jsonObject.get("address"))){
-                msg = "Modification effectué" ;
+                statusCode = "700" ;
                 index = i ;
             }
         }
@@ -150,35 +154,37 @@ public class RequestRepository {
             mFireStations.getStation().remove(index);
             mFireStations.getStation().add(jsonObject.get("station"));
 
-            saveDataJSON.saveDataJson();
+            saveDataJSON.saveDataJson(urlFileReader.urlDataJSON());
         }
-
-        return msg ;
+        Logger.info("statusCode: " + statusCode);
+        return statusCode ;
     }
     /**Endpoint de DELETE /firestation**/
     public String deleteFireStation(String fireStation){
-        msg = "Cette station n'existe pas" ;
+        statusCode = "704" ;
         jsonObject = converteStrJSon(fireStation) ;
         index = -1 ;
 
         for(int i = 0 ; i < mFireStations.getAddress().size() ; i++){
-            if(mFireStations.getAddress().get(i).equals(jsonObject.get("address")) && mFireStations.getStation().get(i).equals("station")){
-                msg = "Suppresion effectué" ;
+            if(mFireStations.getAddress().get(i).equals(jsonObject.get("address")) && mFireStations.getStation().get(i).equals(jsonObject.get("station"))){
+                statusCode = "700" ;
                 index = i ;
             }
         }
 
         if(index != -1){
-            mFireStations.getStation().remove(index);
             mFireStations.getAddress().remove(index);
-            saveDataJSON.saveDataJson();
+            mFireStations.getStation().remove(index);
+            saveDataJSON.saveDataJson(urlFileReader.urlDataJSON());
         }
-        return msg ;
+        Logger.info("statusCode: " + statusCode);
+
+        return statusCode ;
     }
 
     /**Endpoint de POST /medicalRecord**/
     public String createMedicalRecords(String medicalRecord){
-        msg = "Antécédant médicaux enregistré avec succés" ;
+        statusCode = "700" ;
 
         jsonObject = new JSONObject();
         jsonObject = converteStrJSon(medicalRecord);
@@ -189,19 +195,19 @@ public class RequestRepository {
         mMedicalRecords.getMedications().add(jsonObject.get("medications"));
         mMedicalRecords.getAllergies().add(jsonObject.get("allergies"));
 
-        saveDataJSON.saveDataJson();
-
-        return msg ;
+        saveDataJSON.saveDataJson(urlFileReader.urlDataJSON());
+        Logger.info("statusCode: " + statusCode);
+        return statusCode ;
     }
     /**Endpoint de PUT /medicalRecord**/
     public String updateMedicalRecords(String medicalRecord){
-        msg = "Cette personne n'existe pas" ;
+        statusCode = "704" ;
         jsonObject = converteStrJSon(medicalRecord);
         index = -1 ;
 
         for(int i = 0 ; i < mMedicalRecords.getFirstName().size() ; i++){
             if(mMedicalRecords.getFirstName().get(i).equals(jsonObject.get("firstName")) && mMedicalRecords.getLastName().get(i).equals(jsonObject.get("lastName"))){
-                msg = "Modification effectué" ;
+                statusCode = "700" ;
                 index = i ;
             }
         }
@@ -217,20 +223,20 @@ public class RequestRepository {
             mMedicalRecords.getMedications().remove(index);
             mMedicalRecords.getMedications().add(jsonObject.get("medications"));
 
-            saveDataJSON.saveDataJson();
+            saveDataJSON.saveDataJson(urlFileReader.urlDataJSON());
         }
-
-        return msg ;
+        Logger.info("statusCode: " + statusCode);
+        return statusCode ;
     }
     /**Endpoint de DELETE /medicalRecord**/
     public String deleteMedicalRecords(String medicalRecord){
-        msg = "Cette personne n'existe pas" ;
+        statusCode = "704" ;
         jsonObject = converteStrJSon(medicalRecord);
         index = -1 ;
 
         for(int i = 0 ; i < mMedicalRecords.getFirstName().size() ; i++){
             if(mMedicalRecords.getFirstName().get(i).equals(jsonObject.get("firstName")) && mMedicalRecords.getLastName().get(i).equals(jsonObject.get("lastName"))){
-                msg = "Suppresion effectué" ;
+                statusCode = "700" ;
                 index = i ;
             }
         }
@@ -242,10 +248,10 @@ public class RequestRepository {
             mMedicalRecords.getMedications().remove(index);
             mMedicalRecords.getAllergies().remove(index);
 
-            saveDataJSON.saveDataJson();
+            saveDataJSON.saveDataJson(urlFileReader.urlDataJSON());
         }
-
-        return msg ;
+        Logger.info("statusCode: " + statusCode);
+        return statusCode ;
     }
 
     /**Convertis string en format JSON**/

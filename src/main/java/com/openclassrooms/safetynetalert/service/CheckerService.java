@@ -2,6 +2,7 @@ package com.openclassrooms.safetynetalert.service;
 
 import com.openclassrooms.safetynetalert.LoadDataJSON;
 import com.openclassrooms.safetynetalert.config.UrlFileReader;
+import org.pmw.tinylog.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,28 +15,26 @@ public class CheckerService {
     private UrlFileReader urlFileReader ;
 
     public void checkingLoadDataJSon(){
-        System.out.println("Loading DataJson ...");
-        System.out.println("-----------------");
-        System.out.println("--Load Persons--");
-        if(loadDataJSON.loadPersons(urlFileReader.urlDataJSONTest()) == true){
-            System.out.println("SUCCESS");
-        }else if(loadDataJSON.loadPersons(urlFileReader.urlDataJSONTest()) == false){
-            System.out.println("ERROR");
+        Logger.debug("Loading DataJson ...");
+        Logger.debug("Load Persons");
+        if(loadDataJSON.loadPersons(urlFileReader.urlDataJSON())== true){
+            Logger.debug("SUCCESS");
+        }else if(loadDataJSON.loadPersons(urlFileReader.urlDataJSON()) == false){
+            Logger.debug("ERROR");
         }
-        System.out.println("--Load FireStations--");
-        if(loadDataJSON.loadFireStations(urlFileReader.urlDataJSONTest()) == true){
-            System.out.println("SUCCESS");
-        }else if(loadDataJSON.loadFireStations(urlFileReader.urlDataJSONTest()) == false){
-            System.out.println("ERROR");
+        Logger.debug("Load FireStations");
+        if(loadDataJSON.loadFireStations(urlFileReader.urlDataJSON()) == true){
+            Logger.debug("SUCCESS");
+        }else if(loadDataJSON.loadFireStations(urlFileReader.urlDataJSON()) == false){
+            Logger.debug("ERROR");
         }
-        System.out.println("--Load Medical Records--");
-        if(loadDataJSON.loadMedicalRecords(urlFileReader.urlDataJSONTest()) == true){
-            System.out.println("SUCCESS");
-        }else if(loadDataJSON.loadMedicalRecords(urlFileReader.urlDataJSONTest()) == false){
-            System.out.println("ERROR");
+        Logger.debug("Load Medical Records");
+        if(loadDataJSON.loadMedicalRecords(urlFileReader.urlDataJSON()) == true){
+            Logger.debug("SUCCESS");
+        }else if(loadDataJSON.loadMedicalRecords(urlFileReader.urlDataJSON()) == false){
+            Logger.debug("ERROR");
         }
-        System.out.println("-----------------");
-        System.out.println("Loading over");
+        Logger.debug("Loading over");
     }
 
 }

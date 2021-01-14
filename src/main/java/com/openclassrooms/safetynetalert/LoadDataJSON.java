@@ -16,6 +16,7 @@ import com.openclassrooms.safetynetalert.model.Persons;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.pmw.tinylog.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -37,10 +38,11 @@ public class LoadDataJSON {
             ObjectMapper objectMapper = new ObjectMapper() ;
 
             Object obj = jsonParser.parse(new FileReader(url));
-
+            Logger.debug("loadJsonFile success");
             return obj ;
 
         }catch (Exception e){
+            Logger.error("loadJsonFile has failed");
             e.printStackTrace();
         }
 
@@ -132,6 +134,9 @@ public class LoadDataJSON {
 
     /**Remise à zéro des Arrays dans les classe Persons / FireStations / MedicalRecord**/
     public void resetArrayPersons(){
+
+        Logger.debug("resetArrayPerson");
+
         mPersons.setFirstName(new JSONArray());
         mPersons.setLastName(new JSONArray());
         mPersons.setAddress(new JSONArray());
@@ -142,11 +147,13 @@ public class LoadDataJSON {
     }
 
     public void resetArrayFireStation(){
+        Logger.debug("resetArrayFireStation");
         mFireStations.setAddress(new JSONArray());
         mFireStations.setStation(new JSONArray());
     }
 
     public void resetArrayMedicalRecord(){
+        Logger.debug("resetArrayMedicalRecord");
         mMedicalRecords.setFirstName(new JSONArray());
         mMedicalRecords.setLastName(new JSONArray());
         mMedicalRecords.setBirthdate(new JSONArray());
