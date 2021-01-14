@@ -1,5 +1,6 @@
 package com.openclassrooms.safetynetalert;
 
+import com.openclassrooms.safetynetalert.config.UrlFileReader;
 import com.openclassrooms.safetynetalert.model.FireStations;
 import com.openclassrooms.safetynetalert.model.MedicalRecords;
 import com.openclassrooms.safetynetalert.model.Persons;
@@ -24,7 +25,7 @@ public class SaveDataJSON {
     @Autowired
     private CheckerService checkerService ;
 
-    public void saveDataJson(){
+    public void saveDataJson(String url){
         JSONObject obj = new JSONObject();
         JSONArray persons = new JSONArray();
         JSONArray fireStation = new JSONArray();
@@ -63,7 +64,7 @@ public class SaveDataJSON {
         obj.put("firestations",fireStation);
         obj.put("medicalrecords",medicalRecords);
 
-        try(FileWriter file = new FileWriter("C:/Users/Romuald/Desktop/Exercice OCR/Developpement d'application java/Projet 5/safetynetalert/src/main/resources/data.json", false)) {
+        try(FileWriter file = new FileWriter(url, false)) {
             file.write(obj.toJSONString());
         } catch (IOException e) {
             e.printStackTrace();

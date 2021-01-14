@@ -70,9 +70,23 @@ public class ReponseControllerTest {
         assertEquals(exit, exitTestArr);
     }
     @Test
-    public void childrenByAddress(){
-
+    public void childrenByAddressWithoutChildTest(){
         exit = reponseController.childrenByAddress("1509 Culver St");
+
+        assertEquals(exitTestArr,exit);
+
+    }
+    @Test
+    public void childrenByAddressWithChildTest(){
+        exitTestObj.put("firstName","Zach");
+        exitTestObj.put("lastName", "Cooper");
+        exitTestObj.put("age",10);
+        exitTestArr.add(exitTestObj);
+        testArr.add("firstName: Zach");
+        testArr.add("lastName: Cooper");
+        exitTestArr.add(testArr);
+
+        exit = reponseController.childrenByAddress("489 Manchester St");
 
         assertEquals(exitTestArr,exit);
 
@@ -130,6 +144,9 @@ public class ReponseControllerTest {
     @Test
     public void emailByCityTest(){
         exitTestObj.put("email","jaboyd@email.com");
+        exitTestArr.add(exitTestObj);
+        exitTestObj = new JSONObject();
+        exitTestObj.put("email","zaco@email.com");
         exitTestArr.add(exitTestObj);
 
         exit = reponseController.emailByCity("Culver");

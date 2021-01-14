@@ -11,6 +11,8 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
+import org.pmw.tinylog.Logger;
+
 @Repository
 public class ReponseRepository {
 
@@ -22,7 +24,6 @@ public class ReponseRepository {
     private MedicalRecords mMedicalRecords ;
 
     private LocalDate currentDate ;
-    private LocalDate birthDate ;
     final DateTimeFormatter MY_PATTERN = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
     private JSONArray address ;
@@ -30,7 +31,6 @@ public class ReponseRepository {
 
     /**Endpoint de firestation?stationNumber=<station_number**/
     public JSONArray personByStation(String station_number){
-
         address = new JSONArray();
         JSONArray personsByStation = new JSONArray();
         int nbrAdulte = 0 ;
@@ -57,6 +57,8 @@ public class ReponseRepository {
         }
         personsByStation.add("Nombre(s) mineur(s) = " + nbrEnfant);
         personsByStation.add("Nombre(s) adulte(s) = " + nbrAdulte);
+
+        Logger.info("personsByStation: " + personsByStation);
 
 
         return personsByStation ;
@@ -91,7 +93,7 @@ public class ReponseRepository {
             }
             childByAddress.add(listFamilly);
         }
-
+        Logger.info("childByAddress: " + childByAddress);
         return childByAddress ;
     }
     /**Endpoint de phoneAlert?firestation=<firestation_number>**/
@@ -113,6 +115,8 @@ public class ReponseRepository {
             }
 
         }
+        Logger.info("phoneByStation: " + phoneByStation);
+
         return phoneByStation ;
     }
     /**Endpoint de fire?address=<address>**/
@@ -134,6 +138,7 @@ public class ReponseRepository {
                 personByAddress.add(obj);
             }
         }
+        Logger.info("personByAddress: " + personByAddress);
 
         return personByAddress ;
     }
@@ -158,6 +163,8 @@ public class ReponseRepository {
                 }
             }
         }
+        Logger.info("famillyByAddress: " + famillyByAddress);
+
         return famillyByAddress ;
     }
     /**Endpont de personInfo?firstName=<firstName>&lastName=<lastName>**/
@@ -176,7 +183,7 @@ public class ReponseRepository {
 
             }
         }
-
+        Logger.info("personsInfoByName: " + personInfoByName);
         return personInfoByName ;
 
     }
@@ -191,36 +198,36 @@ public class ReponseRepository {
                 emailByCity.add(obj);
             }
         }
-
+        Logger.info("emailByCity: " + city);
         return emailByCity ;
     }
 
     /**Permet de calculer l'age des personnes**/
     public int agePersons(String birthDateStr){
-
+        Logger.debug("agePersons: " + birthDateStr);
         int age = 0 ;
 
-        birthDate = LocalDate.parse(""+birthDateStr, MY_PATTERN);
+        LocalDate birthDate = LocalDate.parse("" + birthDateStr, MY_PATTERN);
         currentDate = LocalDate.now();
         age = Period.between(birthDate,currentDate).getYears();
-
+        Logger.debug("age: " + age);
         return age ;
     }
     /**Chercher une liste d'adresse par rapport au numéro de station**/
     public JSONArray addressFromNumberStation(String station_number){
-
+        Logger.debug("addressFromNumberStation: " + station_number);
         JSONArray addressFromNumberSt = new JSONArray();
         for(int i = 0 ; i < mFireStations.getStation().size() ; i++){
             if(mFireStations.getStation().get(i).equals(station_number)){
                 addressFromNumberSt.add(mFireStations.getAddress().get(i));
             }
         }
-
+        Logger.debug("addressFromNumberSt: " + addressFromNumberSt);
         return addressFromNumberSt ;
     }
     /**Chercher le numéro de caserne en fonction de l'adresse**/
     public String numberStationFromAddress(String address){
-
+        Logger.debug("numberStationFromAddress: " + address);
         String numberStationFrAd = "" ;
 
         for(int i = 0 ; i < mFireStations.getAddress().size() ; i++){
@@ -228,7 +235,7 @@ public class ReponseRepository {
                 numberStationFrAd = ""+mFireStations.getStation().get(i);
             }
         }
-
+        Logger.debug("numberStationFrAd: " + numberStationFrAd);
         return numberStationFrAd ;
 
     }
