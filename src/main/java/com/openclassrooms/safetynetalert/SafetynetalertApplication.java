@@ -19,7 +19,7 @@ class SafetynetalertApplication implements CommandLineRunner {
 	@Override
 	public void run(String ...args) {
 		System.out.println("-------------------------------------------");
-		System.out.println("WELCOME TO SAFETY NET ALERT API VERSION 0.8");
+		System.out.println("WELCOME TO SAFETY NET ALERT API VERSION 1.0.0");
 		System.out.println("-------------------------------------------");
 		checkerService.checkingLoadDataJSon();
 	}
