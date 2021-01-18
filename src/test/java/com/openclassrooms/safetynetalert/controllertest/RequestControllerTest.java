@@ -29,7 +29,6 @@ public class RequestControllerTest {
         objStr = new JSONObject();
         arrStr = new JSONArray();
     }
-
     @Test
     @Order(1)
     public void createPersonsTest(){
