@@ -1,34 +1,34 @@
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
 DEBUG: Loading DataJson ...
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
 DEBUG: Load Persons
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSON()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSON()
 DEBUG: getUrlDataJSON
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayPersons()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayPersons()
 DEBUG: resetArrayPerson
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
 DEBUG: loadJsonFile success
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
 DEBUG: SUCCESS
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
 DEBUG: Load FireStations
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSON()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSON()
 DEBUG: getUrlDataJSON
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayFireStation()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayFireStation()
 DEBUG: resetArrayFireStation
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
 DEBUG: loadJsonFile success
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
 DEBUG: SUCCESS
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
 DEBUG: Load Medical Records
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSON()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.config.UrlFileReader.urlDataJSON()
 DEBUG: getUrlDataJSON
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayMedicalRecord()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.LoadDataJSON.resetArrayMedicalRecord()
 DEBUG: resetArrayMedicalRecord
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.LoadDataJSON.loadJsonFile()
 DEBUG: loadJsonFile success
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
 DEBUG: SUCCESS
-2021-01-18 13:25:13 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
+2021-01-18 13:54:21 [main] com.openclassrooms.safetynetalert.service.CheckerService.checkingLoadDataJSon()
 DEBUG: Loading over
