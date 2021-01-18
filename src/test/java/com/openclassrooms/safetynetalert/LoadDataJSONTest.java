@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SpringBootTest
 @Component
-public class LoadDataJSONTest {
+class LoadDataJSONTest {
 
     @Autowired
     private LoadDataJSON loadDataJSON ;

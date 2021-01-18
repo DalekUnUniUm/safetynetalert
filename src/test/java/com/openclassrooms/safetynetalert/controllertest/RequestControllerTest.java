@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class RequestControllerTest {
+class RequestControllerTest {
 
     @Autowired
     private RequestController requestController ;

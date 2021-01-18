@@ -255,7 +255,7 @@ public class RequestRepository {
     }
 
     /**Convertis string en format JSON**/
-    public JSONObject converteStrJSon(String strJson){
+    private JSONObject converteStrJSon(String strJson){
 
         JSONParser jsonParser = new JSONParser();
         JSONObject strJSon = new JSONObject();

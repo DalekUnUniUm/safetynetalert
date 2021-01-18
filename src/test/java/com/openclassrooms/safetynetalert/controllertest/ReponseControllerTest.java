@@ -1,6 +1,5 @@
 package com.openclassrooms.safetynetalert.controllertest;
 
-import com.openclassrooms.safetynetalert.LoadDataJSONTest;
 import com.openclassrooms.safetynetalert.controller.ReponseController;
 import com.openclassrooms.safetynetalert.model.Persons;
 import com.openclassrooms.safetynetalert.service.ReponseService;
@@ -15,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-public class ReponseControllerTest {
+class ReponseControllerTest {
 
     @Autowired
     private ReponseService reponseService ;

@@ -9,7 +9,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-public class SafetynetalertApplication implements CommandLineRunner {
+class SafetynetalertApplication implements CommandLineRunner {
 	@Autowired
 	private CheckerService checkerService;
 	public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class SafetynetalertApplication implements CommandLineRunner {
 	}
 
 	@Override
-	public void run(String ...args) throws Exception{
+	public void run(String ...args) {
 		System.out.println("-------------------------------------------");
 		System.out.println("WELCOME TO SAFETY NET ALERT API VERSION 0.8");
 		System.out.println("-------------------------------------------");

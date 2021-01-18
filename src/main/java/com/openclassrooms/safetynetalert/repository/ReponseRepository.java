@@ -24,7 +24,7 @@ public class ReponseRepository {
     private MedicalRecords mMedicalRecords ;
 
     private LocalDate currentDate ;
-    final DateTimeFormatter MY_PATTERN = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+    private final DateTimeFormatter MY_PATTERN = DateTimeFormatter.ofPattern("MM/dd/yyyy");
 
     private JSONArray address ;
     private JSONObject obj = new JSONObject();
@@ -203,7 +203,7 @@ public class ReponseRepository {
     }
 
     /**Permet de calculer l'age des personnes**/
-    public int agePersons(String birthDateStr){
+    private int agePersons(String birthDateStr){
         Logger.debug("agePersons: " + birthDateStr);
         int age = 0 ;
 
@@ -214,7 +214,7 @@ public class ReponseRepository {
         return age ;
     }
     /**Chercher une liste d'adresse par rapport au numéro de station**/
-    public JSONArray addressFromNumberStation(String station_number){
+    private JSONArray addressFromNumberStation(String station_number){
         Logger.debug("addressFromNumberStation: " + station_number);
         JSONArray addressFromNumberSt = new JSONArray();
         for(int i = 0 ; i < mFireStations.getStation().size() ; i++){
@@ -226,7 +226,7 @@ public class ReponseRepository {
         return addressFromNumberSt ;
     }
     /**Chercher le numéro de caserne en fonction de l'adresse**/
-    public String numberStationFromAddress(String address){
+    private String numberStationFromAddress(String address){
         Logger.debug("numberStationFromAddress: " + address);
         String numberStationFrAd = "" ;
 

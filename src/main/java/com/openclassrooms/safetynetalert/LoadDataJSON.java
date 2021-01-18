@@ -1,10 +1,10 @@
-/** LOADDATAJSON
- *
- * Crée le 06/01/2021
- *
- * Cette classe à pour rôle de charger les données contenu dans data.json
- * Et de les rentrer dans les classes modeles
- *
+/* LOADDATAJSON
+
+  Crée le 06/01/2021
+
+  Cette classe à pour rôle de charger les données contenu dans data.json
+  Et de les rentrer dans les classes modeles
+
  */
 
 package com.openclassrooms.safetynetalert;
@@ -32,7 +32,7 @@ public class LoadDataJSON {
     @Autowired
     private MedicalRecords mMedicalRecords ; /** Le m indique qu'on cherche la classe MedicalRecords dans le modele**/
 
-    public Object loadJsonFile(String url){
+    private Object loadJsonFile(String url){
         try{
             JSONParser jsonParser = new JSONParser();
             ObjectMapper objectMapper = new ObjectMapper() ;
@@ -133,7 +133,7 @@ public class LoadDataJSON {
     }
 
     /**Remise à zéro des Arrays dans les classe Persons / FireStations / MedicalRecord**/
-    public void resetArrayPersons(){
+    private void resetArrayPersons(){
 
         Logger.debug("resetArrayPerson");
 
@@ -146,13 +146,13 @@ public class LoadDataJSON {
         mPersons.setEmail(new JSONArray());
     }
 
-    public void resetArrayFireStation(){
+    private void resetArrayFireStation(){
         Logger.debug("resetArrayFireStation");
         mFireStations.setAddress(new JSONArray());
         mFireStations.setStation(new JSONArray());
     }
 
-    public void resetArrayMedicalRecord(){
+    private void resetArrayMedicalRecord(){
         Logger.debug("resetArrayMedicalRecord");
         mMedicalRecords.setFirstName(new JSONArray());
         mMedicalRecords.setLastName(new JSONArray());
